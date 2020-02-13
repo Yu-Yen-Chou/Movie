@@ -21,6 +21,7 @@ class Overview_Cell: UITableViewCell {
        bg_view.layer.shadowOffset = CGSize(width: -1, height: 1)
        title.lineBreakMode = .byWordWrapping
        title.numberOfLines = 0
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
