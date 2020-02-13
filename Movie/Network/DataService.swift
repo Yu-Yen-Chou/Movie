@@ -14,13 +14,13 @@ import Network
 struct DataService {
 
    
-    
+   
 // MARK: - Singleton
  static let shared = DataService()
 let monitor = NWPathMonitor()
 // MARK: - URL
   
-   
+    
    // private var Discover : String?
     
     func Https_Discover(Page:Int,sort_by:String,primary_release_date:String,completion: @escaping (M_Home?, Error?) -> ()){
