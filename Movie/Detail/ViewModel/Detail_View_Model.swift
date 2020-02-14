@@ -69,6 +69,11 @@ class Detail_View_Model: NSObject
         init(dataService: DataService) {
           self.dataService = dataService
             
+            people_str = nil
+            time_str = nil
+            date_str = nil
+            time_type = nil
+            
             select_people.removeAll()
             select_time.removeAll()
             select_date.removeAll()
