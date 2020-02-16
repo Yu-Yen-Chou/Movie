@@ -146,10 +146,12 @@ class Detail_View: UIViewController {
              ViewModel.Movie_Detail(id: d_id)
         }
          
-        ViewModel.didFinishDetail =
-        {
-           self.Detail_Tab.reloadData()
-        }
+      
+        ViewModel.didFinishDetail = { [weak self] () in
+                  DispatchQueue.main.async {
+                    self!.Detail_Tab.reloadData()
+                  }
+              }
           
     
      }

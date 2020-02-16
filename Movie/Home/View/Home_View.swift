@@ -59,11 +59,15 @@ class Home_View: UIViewController {
            
         ViewModel.Movie_Discover(Page:1, sort_by:G_sort_by, release_date:G_release_date)
               
-        ViewModel.didFinishDiscover =
-        {
-            self.Home_Table.reloadData()
-            self.RefreshControl.endRefreshing()
+
+        
+        ViewModel.didFinishDiscover = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.Home_Table.reloadData()
+                self?.RefreshControl.endRefreshing()
+            }
         }
+        
         ViewModel.didTapcell =
         {
             let View = Detail_View()
