@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Kingfisher
+
 
 enum type_error:Int
 {
@@ -31,28 +31,7 @@ class Detail_View_Model: NSObject
     var title_items = [String]()
     var items = [String:String]()
     var poster_img = UIImageView()
-    var poster_path:String?
-    {
-        didSet
-        {
-            if let  path = poster_path
-            {
-                if (path == "")
-                {
-                     poster_img.image = UIImage(named:"No_Image")
-                }
-                else
-                {
-                    //讀cache img
-                    let base_url = G_Imgurl + path
-                    let articleUrl = URL(string: base_url)
-                    let imageResource = ImageResource(downloadURL: articleUrl!, cacheKey: base_url)
-                    poster_img.kf.setImage(with: imageResource)
-                }
-            }
-            
-        }
-    }
+
      private var dataService: DataService?
     var Model_Detail:M_Detail?{
        didSet {
