@@ -8,6 +8,11 @@ need pod install will execute project
 pod install
  
 ```
+
+## Demo
+
+![image](https://github.com/Yu-Yen-Chou/File/blob/master/Access_Img/movie.gif)
+
 ## Usage
 Language: Swift  
 Architecture: MVVM  
@@ -121,9 +126,6 @@ Discover movies by different types of data like average rating, number of votes,
 }
  
 ```
-## Demo
-
-![image](https://github.com/Yu-Yen-Chou/File/blob/master/Access_Img/movie.gif)
 
 
 ## Example Code
